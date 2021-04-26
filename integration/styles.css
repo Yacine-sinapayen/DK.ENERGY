@@ -5,17 +5,15 @@
     max-block-size: max-content;
 }
 
-.form {
-    background-color: #999;
+form {
+    background-color: rgb(209, 74, 74);
+    display: flex;
 }
 
 .h1 {
    font-size: 3rem; 
    text-align: center;
 }
-
-
-
 
 
 .bloc_container_article{
