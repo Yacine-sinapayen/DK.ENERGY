@@ -128,54 +128,39 @@
                     </div>
                 </div>
 
-            <!--
-
-                <div class="forms" id="forms">
-                        <div class="row">
-                                <h1>Contacte nous !</h1>
+                <form >
+                    <div class="row input-container">
+                        <div class="col-xs-12">
+                            <div class="styled-input wide">
+                                <input type="text" id="html" required  />
+                                <label>Nom-Prénom</label>
+                            </div>
                         </div>
-                        <div class="row input-container">
-                                <div class="col-xs-12">
-                                    <div class="styled-input wide">
-                                        <input type="text" required />
-                                        <label>Nom-Prénom</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-sm-12">
-                                    <div class="styled-input">
-                                        <input type="text" required />
-                                        <label>Email</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-sm-12">
-                                    <div class="styled-input" style="float:right;">
-                                        <input type="text" required />
-                                        <label>Numéro de téléphone</label>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12">
-                                    <div class="styled-input wide">
-                                        <textarea required></textarea>
-                                        <label>Présentez-vous</label>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12">
-                                    <div class="btn-lrg submit-btn">Envoyer</div>
-                                </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="styled-input">
+                                <input type="email" id="email" required/>
+                                <label>Email</label>
+                            </div>
                         </div>
+                        <div class="col-md-6 col-sm-12">
+                            <div class="styled-input" style="float:right;">
+                                <input type="text" id="numéro" required />
+                                <label>Numéro de téléphone</label>
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="styled-input wide" >
+                                <textarea name="text" id="text" cols="30" rows="10" required></textarea>
+                                <label>Présentez-vous</label>
+                            </div>
+                        </div>
+                        
+                        <input type="submit" value="Envoyer" class="submit-btn hover" />
                     </div>
-            -->
-
-            
-                <form>
-                    <input type="text" id="subject" placeholder="Subject" /> <br />
-                    <input type="email" id="email" placeholder="Receiver email" /> <br />
-                    <textarea name="text" id="text" cols="30" rows="10"></textarea> <br />
-                    <input type="submit" value="Submit" />
                 </form>
-                
-            
-            <!--Step 3 -->
+        
+
+            <!--Step 3 :script gestion soumission formulaire-->
 
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
             </script>
@@ -185,13 +170,13 @@
                     e.preventDefault();
     
                     const email = $('#email').val().trim();
-                    const subject = $('#subject').val().trim();
                     const text = $('#text').val().trim();
+                    const NomPrénom = $('#html').val().trim();
+                    const numéro = $('#numéro').val().trim();
     
                     const data = {
                         email,
-                        subject,
-                        text
+                        text,
                     };
     
                     $.post('/email', data, function() {console.log("Server received our data")} 
@@ -206,7 +191,7 @@
                     <nav class="footer-items">Insta</nav>
                     <nav class="footer-items">Twitter</nav>
                 </footer>
-            </div>
+        </div>
 
     </body>
 </html>

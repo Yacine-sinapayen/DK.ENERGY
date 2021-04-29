@@ -12,12 +12,12 @@ const auth = {
 const transporter = nodemailer.createTransport(mailGun(auth));
 
 //step 4
-const sendMail = (email, subject, text, cb) => {
+const sendMail = (email, text, cb) => {
     const mailOptions = {
         from: email,
         to: 'dk.energy.recrutement@gmail.com',
-        subject,
-        text
+        NomPrénom,
+        text,
     };
     
     transporter.sendMail(mailOptions, function(err, data){
