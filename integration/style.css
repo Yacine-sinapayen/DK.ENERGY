@@ -1,0 +1,376 @@
+@charset "UTF-8";
+.body {
+  display: block;
+  background-color: #faf7f7;
+  font-family: "Montserrat", sans-serif;
+  max-block-size: max-content;
+  height: 100%;
+}
+
+.h1 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+/* HEADER */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 66px;
+  line-height: 66px;
+  color: black;
+  background-color: white;
+}
+
+.header__logo {
+  float: left;
+  justify-content: right;
+}
+
+/* MENU */
+.menu {
+  float: left;
+}
+.menu a {
+  padding: 0 10px;
+}
+
+.bloc_container_article {
+  display: flex;
+  align-items: center;
+}
+
+.postuler {
+  color: white;
+  align-items: center;
+  background-color: #93bad9;
+  box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25), -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  width: 7.5rem;
+  height: 2rem;
+  margin: -0.5rem;
+  background: linear-gradient(-45deg, #ffde59, #e7333a);
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.Qui-sommes-nous {
+  padding: 1rem;
+  color: white;
+  display: flex;
+  background: linear-gradient(-45deg, #ffde59, #e7333a);
+  align-items: center;
+}
+
+.Qui-sommes-nous-paragraphe {
+  margin: auto;
+  width: 50%;
+}
+
+.QSN-titre {
+  width: 100%;
+  animation-duration: 3s;
+  animation-name: glissement;
+}
+
+.arret {
+  animation-play-state: paused;
+}
+
+.encours {
+  animation-play-state: running;
+}
+
+@keyframes glissement {
+  from {
+    margin-left: 100%;
+    width: 200%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+.Qui-sommes-nous-image {
+  width: 50%;
+}
+
+.Qui-sommes-nous-logo {
+  margin: 1rem;
+  box-shadow: -8px -8px 12px 0 rgba(0, 0, 0, 0.3), 12px 12px 16px rgba(255, 255, 255, 0.25);
+  display: block;
+  margin: auto;
+}
+
+.Notre-métier {
+  display: flex;
+}
+
+.Notre-métier-image {
+  width: 50%;
+  align-items: center;
+}
+
+.Notre-métier-logo {
+  width: 90%;
+  display: block;
+  margin: auto;
+}
+
+.Notre-métier-paragraphe {
+  margin: auto;
+  width: 50%;
+}
+
+.NM-titre {
+  width: 100%;
+  animation-duration: 3s;
+  animation-name: glissement;
+}
+
+.Nos-valeurs {
+  padding: 1rem;
+  color: white;
+  display: block;
+  background: linear-gradient(-45deg, #ffde59, #e7333a);
+}
+
+.Nos-valeurs-paragraphe {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  max-width: 50%;
+}
+
+.NV-titre {
+  text-align: center;
+  width: 100%;
+  animation-duration: 3s;
+  animation-name: glissement;
+}
+
+.Partie-Icons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.Icons-paragraphe {
+  text-align: center;
+}
+
+.Icons-images {
+  height: 100px;
+}
+
+.Nos-postes {
+  text-align: center;
+  padding: 1rem;
+}
+
+.Nos-postes-paragraphe {
+  margin-top: 2.3rem;
+}
+
+.postuler-nos-postes {
+  color: white;
+  align-items: center;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  width: 7.5rem;
+  margin: auto;
+  height: 2rem;
+  background: linear-gradient(-45deg, #ffde59, #e7333a);
+}
+
+form {
+  padding: 1rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(-45deg, #ffde59, #e7333a);
+  align-items: center;
+}
+
+input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
+  font-size: 0.75em;
+  color: #999;
+  top: -5px;
+  -webkit-transition: all 0.225s ease;
+  transition: all 0.225s ease;
+}
+
+.styled-input {
+  float: left;
+  width: 293px;
+  margin: 1rem 0;
+  position: relative;
+  border-radius: 4px;
+}
+
+@media only screen and (max-width: 768px) {
+  .styled-input {
+    width: 100%;
+  }
+}
+.styled-input label {
+  color: #999;
+  padding: 1.3rem 30px 1rem 30px;
+  position: absolute;
+  top: 10px;
+  left: 0;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  pointer-events: none;
+}
+
+.styled-input.wide {
+  width: 650px;
+  max-width: 100%;
+}
+
+input,
+textarea {
+  padding: 30px;
+  border: 0;
+  width: 100%;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+input:focus,
+textarea:focus {
+  outline: 0;
+}
+
+input:focus ~ span,
+textarea:focus ~ span {
+  width: 100%;
+  -webkit-transition: all 0.075s ease;
+  transition: all 0.075s ease;
+}
+
+textarea {
+  width: 100%;
+  min-height: 15em;
+}
+
+.input-container {
+  width: 650px;
+  max-width: 100%;
+  margin: 20px auto 25px auto;
+}
+
+.submit-btn {
+  padding: 7px 35px;
+  border-radius: 60px;
+  display: inline-block;
+  color: #999;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06), 0 2px 10px 0 rgba(0, 0, 0, 0.07);
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  background-color: #93bad9;
+}
+
+.submit-btn:hover {
+  transform: translateY(1px);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0.09);
+}
+
+@media (max-width: 768px) {
+  .submit-btn {
+    width: 100%;
+    float: none;
+    text-align: center;
+  }
+}
+input[type=checkbox] + label {
+  color: #ccc;
+  font-style: italic;
+}
+
+input[type=checkbox]:checked + label {
+  color: #f00;
+  font-style: normal;
+}
+
+.footer {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-items {
+  padding: 0rem;
+  margin: 0.7rem;
+}
+
+@media (max-width: 1200px) {
+  .Qui-sommes-nous {
+    text-align: -webkit-center;
+  }
+
+  .Qui-sommes-nous-paragraphe {
+    width: 100%;
+  }
+
+  .Qui-sommes-nous-logo {
+    margin: 1rem;
+    box-shadow: -8px -8px 12px 0 rgba(0, 0, 0, 0.3), 12px 12px 16px rgba(255, 255, 255, 0.25);
+    width: 70%;
+    display: block;
+  }
+}
+@media (max-width: 400px) {
+  .row_nav {
+    display: flex;
+  }
+
+  .row_nav_logo {
+    margin-bottom: -1.8rem;
+  }
+
+  .nav-content {
+    width: 50%;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+  }
+
+  .nav-content-items {
+    margin: 1rem auto;
+  }
+
+  .logo {
+    height: 100%;
+    width: 10%;
+  }
+
+  .Partie-Icons {
+    flex-wrap: wrap;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

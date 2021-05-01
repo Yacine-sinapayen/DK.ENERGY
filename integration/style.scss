@@ -3,6 +3,7 @@
     background-color:#faf7f7;
     font-family: 'Montserrat', sans-serif;
     max-block-size: max-content;
+    height : 100%;
 }
 
 .h1 {
@@ -10,6 +11,34 @@
    text-align: center;
 }
 
+/* HEADER */
+
+a{text-decoration: none; color: inherit;}
+
+.header {
+    position :fixed;
+    left:0;
+    right: 0;
+    height: 66px;
+
+    line-height: 66px;
+    color: black;
+
+    background-color: white;
+}
+
+.header__logo{
+    float: left;
+    justify-content: right;
+
+}
+/* MENU */
+.menu{
+    float: left;
+    a { 
+        padding: 0 10px;
+    }
+}
 
 .bloc_container_article{
     display : flex;
@@ -17,28 +46,6 @@
 
 }
 
-
-    .row-nav{
-        display: flex;
-    }
-
-        .row_nav_logo{
-            margin: 0 auto;
-            width: 200px
-        }
-        
-        .nav-content {
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            margin: 4rem;
-        }
-
-            .nav-content-items:hover{
-                transform: scale(1.2);
-           
-            }
 
             .postuler {
                 color:white;
