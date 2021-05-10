@@ -1,6 +1,9 @@
-@import"reset.scss";
+@use"reset.scss";
+@use "responsive";
+$bg: linear-gradient(-45deg, #ffde59, #e7333a);
 
-body {
+
+html, body {
     display: block;
     background-color: #faf7f7;
     font-family: "Montserrat", sans-serif;
@@ -24,25 +27,30 @@ body {
     left: 0;
     right: 0;
     height: 66px;
+
     line-height: 66px;
     color: black;
-    background-color: white;
   }
   
     .header__logo {
       float: left;
-      justify-content: right;
-      width: 10%;
+      padding: 0 25px;
+      float : left ;
+      width : 10%;
     }
   
-  /* MENU */
+  /* MENU */ 
   .menu {
     float: left;
-    display: flex;
+    a{
+      padding: 0 10px; 
+      display : inline-block;
+      margin-right: 1em;
+    }
+    a:hover{color: rgb(230, 112, 17);}
   }
-    a{padding: 0 10px;}
-    a:hover{color: rgb(75, 207, 14);}
-  
+
+  // ------------------------
   
   .bloc_container_article {
     display: flex;
@@ -314,6 +322,8 @@ body {
     padding: 0rem;
     margin: 0.7rem;
   }
+
+//   RESPONSIVE
   
   @media (max-width: 1200px) {
     .Qui-sommes-nous {
@@ -331,33 +341,8 @@ body {
       display: block;
     }
   }
-  @media (max-width: 400px) {
-    .row_nav {
-      display: flex;
-    }
   
-    .row_nav_logo {
-      margin-bottom: -1.8rem;
-    }
-  
-    .nav-content {
-      width: 50%;
-      flex-direction: column;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: auto;
-    }
-  
-    .nav-content-items {
-      margin: 1rem auto;
-    }
-  
-    .logo {
-      height: 100%;
-      width: 10%;
-    }
-  
-    .Partie-Icons {
-      flex-wrap: wrap;
-    }
-  }
+  @media only screen and (max-width: 1000px) {
+    .header{
+        position: static;
+    }}

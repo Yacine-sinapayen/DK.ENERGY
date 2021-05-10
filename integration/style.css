@@ -83,7 +83,34 @@ img {
   max-width: 100%;
 }
 
-body {
+@media only screen and (max-width: 1000px) {
+  .header__icon {
+    position: relative;
+    display: block;
+    float: left;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+  }
+  .header__icon:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 1rem;
+    height: 0;
+    box-shadow: 0 10px 0 1px #f30606, 0 16px 0 1px #f30606, 0 22px 0 1px #f30606;
+  }
+
+  .menu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(-45deg, #ffde59, #e7333a);
+    width: 250px;
+  }
+}
+html, body {
   display: block;
   background-color: #faf7f7;
   font-family: "Montserrat", sans-serif;
@@ -109,27 +136,26 @@ a {
   height: 66px;
   line-height: 66px;
   color: black;
-  background-color: white;
 }
 
 .header__logo {
   float: left;
-  justify-content: right;
+  padding: 0 25px;
+  float: left;
   width: 10%;
 }
 
 /* MENU */
 .menu {
   float: left;
-  display: flex;
 }
-
-a {
+.menu a {
   padding: 0 10px;
+  display: inline-block;
+  margin-right: 1em;
 }
-
-a:hover {
-  color: #4bcf0e;
+.menu a:hover {
+  color: #e67011;
 }
 
 .bloc_container_article {
@@ -419,34 +445,9 @@ input[type=checkbox]:checked + label {
     display: block;
   }
 }
-@media (max-width: 400px) {
-  .row_nav {
-    display: flex;
-  }
-
-  .row_nav_logo {
-    margin-bottom: -1.8rem;
-  }
-
-  .nav-content {
-    width: 50%;
-    flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: auto;
-  }
-
-  .nav-content-items {
-    margin: 1rem auto;
-  }
-
-  .logo {
-    height: 100%;
-    width: 10%;
-  }
-
-  .Partie-Icons {
-    flex-wrap: wrap;
+@media only screen and (max-width: 1000px) {
+  .header {
+    position: static;
   }
 }
 
