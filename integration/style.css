@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -84,6 +83,13 @@ img {
 }
 
 @media only screen and (max-width: 800px) {
+  .body {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    margin: 1em;
+  }
+
   .site-pusher .site-container {
     height: 100%;
   }
@@ -108,6 +114,7 @@ img {
     padding-top: 0;
     overflow-y: scroll;
     background-color: #fff;
+    -webkit-overflow-scrolling: touch;
   }
 
   .header__icon {
@@ -116,6 +123,7 @@ img {
     float: left;
     width: 35px;
     height: 35px;
+    padding: 1em;
     cursor: pointer;
   }
   .header__icon:after {
@@ -124,7 +132,7 @@ img {
     display: block;
     width: 1rem;
     height: 0;
-    box-shadow: 0 10px 0 1px #f30606, 0 16px 0 1px #f30606, 0 22px 0 1px #f30606;
+    box-shadow: 0 10px 0 1px white, 0 16px 0 1px white, 0 22px 0 1px white;
   }
 
   .menu {
@@ -134,8 +142,8 @@ img {
     left: 0;
     top: 0px;
     bottom: 0;
-    color: white;
-    background: linear-gradient(-45deg, #ffde59, #e7333a);
+    color: black;
+    background: #ffde59;
     width: 250px;
     display: flex;
     flex-direction: column;
@@ -145,7 +153,7 @@ img {
     height: 60px;
     text-align: center;
     line-height: 40px;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid black;
   }
 
   .with--sidebar .site-pusher {
@@ -160,17 +168,34 @@ img {
     background-color: rgba(0, 0, 0, 0.6);
   }
 }
+@media only screen and (min-width: 800px) {
+  .site-content {
+    padding-top: 58px;
+  }
+}
 html, body {
-  display: block;
-  background-color: #faf7f7;
   font-family: "Montserrat", sans-serif;
+  color: 229, 229, 229;
+  font-size: 16px;
+  line-height: 1.4;
   height: 100%;
-  margin: 0;
+  margin: 1em;
+  padding: 0;
+  display: block;
+  text-align: center;
 }
 
-.h1 {
-  font-size: 3rem;
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  padding: 1em;
+  color: #444343;
+  font-size: 1.2em;
   text-align: center;
+  font-weight: bold;
 }
 
 /* HEADER */
@@ -183,171 +208,20 @@ a {
   position: fixed;
   left: 0;
   right: 0;
+  top: 0;
   height: 66px;
   line-height: 66px;
-  color: black;
-}
-
-.header__logo {
-  float: left;
-  padding: 0 25px;
-  float: left;
-  width: 10%;
+  color: white;
+  background-color: #c20000;
+  box-shadow: 0 4px 2px -2px gray;
 }
 
 /* MENU */
-.menu {
-  float: left;
-}
 .menu a {
+  font-weight: bold;
   padding: 0 10px;
   display: inline-block;
   margin-right: 1em;
-}
-
-.bloc_container_article {
-  display: flex;
-  align-items: center;
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-.Qui-sommes-nous {
-  padding: 1rem;
-  color: white;
-  display: flex;
-  background: linear-gradient(-45deg, #ffde59, #e7333a);
-  align-items: center;
-}
-
-.Qui-sommes-nous-paragraphe {
-  margin: auto;
-  width: 50%;
-}
-
-.QSN-titre {
-  width: 100%;
-  animation-duration: 3s;
-  animation-name: glissement;
-}
-
-.arret {
-  animation-play-state: paused;
-}
-
-.encours {
-  animation-play-state: running;
-}
-
-@keyframes glissement {
-  from {
-    margin-left: 100%;
-    width: 200%;
-  }
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-}
-.Qui-sommes-nous-image {
-  width: 50%;
-}
-
-.Qui-sommes-nous-logo {
-  margin: 1rem;
-  box-shadow: -8px -8px 12px 0 rgba(0, 0, 0, 0.3), 12px 12px 16px rgba(255, 255, 255, 0.25);
-  display: block;
-  margin: auto;
-}
-
-.Notre-métier {
-  display: flex;
-}
-
-.Notre-métier-image {
-  width: 50%;
-  align-items: center;
-}
-
-.Notre-métier-logo {
-  width: 90%;
-  display: block;
-  margin: auto;
-}
-
-.Notre-métier-paragraphe {
-  margin: auto;
-  width: 50%;
-}
-
-.NM-titre {
-  width: 100%;
-  animation-duration: 3s;
-  animation-name: glissement;
-}
-
-.Nos-valeurs {
-  padding: 1rem;
-  color: white;
-  display: block;
-  background: linear-gradient(-45deg, #ffde59, #e7333a);
-}
-
-.Nos-valeurs-paragraphe {
-  display: flex;
-  flex-wrap: wrap;
-  margin: auto;
-  max-width: 50%;
-}
-
-.NV-titre {
-  text-align: center;
-  width: 100%;
-  animation-duration: 3s;
-  animation-name: glissement;
-}
-
-.Partie-Icons {
-  display: flex;
-  justify-content: space-around;
-}
-
-.Icons-paragraphe {
-  text-align: center;
-}
-
-.Icons-images {
-  height: 100px;
-}
-
-.Nos-postes {
-  text-align: center;
-  padding: 1rem;
-}
-
-.Nos-postes-paragraphe {
-  margin-top: 2.3rem;
-}
-
-.postuler-nos-postes {
-  color: white;
-  align-items: center;
-  border-radius: 50px;
-  display: flex;
-  justify-content: center;
-  width: 7.5rem;
-  margin: auto;
-  height: 2rem;
-  background: linear-gradient(-45deg, #ffde59, #e7333a);
 }
 
 form {
@@ -355,7 +229,6 @@ form {
   color: white;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(-45deg, #ffde59, #e7333a);
   align-items: center;
 }
 
@@ -375,7 +248,7 @@ input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid
   border-radius: 4px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
   .styled-input {
     width: 100%;
   }
@@ -432,13 +305,12 @@ textarea {
   padding: 7px 35px;
   border-radius: 60px;
   display: inline-block;
-  color: #999;
+  color: white;
   font-size: 18px;
   cursor: pointer;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06), 0 2px 10px 0 rgba(0, 0, 0, 0.07);
+  background: #c20000;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
-  background-color: #93bad9;
 }
 
 .submit-btn:hover {
@@ -446,7 +318,7 @@ textarea {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0.09);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .submit-btn {
     width: 100%;
     float: none;
@@ -463,35 +335,6 @@ input[type=checkbox]:checked + label {
   font-style: normal;
 }
 
-.footer {
-  border: 1px solid black;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.footer-items {
-  padding: 0rem;
-  margin: 0.7rem;
-}
-
-@media (max-width: 1200px) {
-  .Qui-sommes-nous {
-    text-align: -webkit-center;
-  }
-
-  .Qui-sommes-nous-paragraphe {
-    width: 100%;
-  }
-
-  .Qui-sommes-nous-logo {
-    margin: 1rem;
-    box-shadow: -8px -8px 12px 0 rgba(0, 0, 0, 0.3), 12px 12px 16px rgba(255, 255, 255, 0.25);
-    width: 70%;
-    display: block;
-  }
-}
 @media only screen and (max-width: 800px) {
   .header {
     position: static;
