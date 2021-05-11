@@ -7,7 +7,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0; maximum-scale=1.0"/>
+    <!-- La ligne du dessu permet de bloquer l'apllication zoom et dezzom en mode mobile. Cela permet au site d'être vraiment utilisé comme une app mobile -->
     <title>DK.ENERGY</title>
     
     <link rel="stylesheet"  href="reset.scss">
@@ -16,104 +17,79 @@
    
 </head>
     
-    <body class="body">
-
-        <header class="header">
-
-            <a href="#" class="header__icon"></a>
-            <img class="header__logo" src="./images/Logo/Copie de DK.ENERGY logo (1).png" alt="logo">
-
-            <nav class="menu">
-                <a class="items"  href="#NotreMétier"> Notre métier</a>
-                <a class="items"  href="#NosValeurs"> Nos valeurs</a>
-                <a class="items" href="#NosPostes"> Nos postes</a>
-                <a class="items postuler" href = "#forms"> Postuler</a>
-            </nav>
-        </header>
-
-        <div class="container">
-            <main>
-
+<body class="body">
+    <div class="site-container">
+        <div class="site-pusher">     
+            <header class="header">
+                <a href="#" class="header__icon" id="header__icon"></a>
+                <img class="header__logo" src="./images/Logo/Copie de DK.ENERGY logo (1).png" alt="logo">
+                <nav class="menu">
+                    <a class="items"  href="#NotreMétier"> Notre métier</a>
+                    <a class="items"  href="#NosValeurs"> Nos valeurs</a>
+                    <a class="items" href="#NosPostes"> Nos postes</a>
+                    <a class="items postuler" href = "#forms"> Postuler</a>
+                </nav>
+            </header>
+            <main class="site-content">
                 <div class="Qui-sommes-nous">
-
                     <div class="Qui-sommes-nous-paragraphe">
                         <h1 class="QSN-titre">DK.ENERGY au service de vos ambitions</h1>
                         <p class="QSN-titre">DK.ENERGY est expert de la vente à domicile, de l'animation et la promotion des ventes depuis plus de 10 ans. Nous mettons notre SAVOIR-FAIRE au service de VOS AMBITIONS commerciales. DK.ENERGY vous assure, la PERFORMANCE, la SOUPLESSE, et le CONFORT d'une force de vente externalisée.  </p>
                     </div>
-
                     <div class="Qui-sommes-nous-image">
                         <img class="Qui-sommes-nous-logo" src="./images/Logo/Copie de DK.ENERGY logo (1).png" alt="logo">
                     </div>
-
                 </div>
-
                 <div class="bloc_container_article Notre_métier" id= "NotreMétier">
-
                     <div class="Notre-métier-image">
                         <img class="Notre-métier-logo" src="./images/Notre métier/poignée-de-main.jpg"
                             alt="poignée de main">
                     </div>
-
                     <div class="Notre-métier-paragraphe">
-
                         <h1 class="NM-titre">Notre métier : Recruter, Former, Animer</h1>
-
                         <p class="NM-titre">
                             Afin de PERFORMER, la rigueur, et l'implication de nos managers autour de ses trois axes primordiaux est essentiel pour créer une synergie autour d'un me objectif : LA PERFORMANCE.
                         </p>
-
-                        <p> 
-                            Recruter : La recherche permanente de talents et de profils ambitieux nous places parmi les sociétés les plus agiles dans le Sud-ouest sur le sujet. Nous sommes dans une optique d'intégration et de performance à long terme pour nos collaborateurs. 
+                        <p>
+                            Recruter : La recherche permanente de talents et de profils ambitieux nous places parmi les sociétés les plus agiles dans le Sud-ouest sur le sujet. Nous sommes dans une optique d'intégration et de performance à long terme pour nos collaborateurs.
                         </p>
-
-                        <p> 
-                            Former : Management de proximité et formation continue sont les clés de la réussite dans l'épanouissement de nos équipes.  
+                        <p>
+                            Former : Management de proximité et formation continue sont les clés de la réussite dans l'épanouissement de nos équipes.
                         </p>
-
-                        <p> 
-                            Animer : Challenges, cadeaux, rémunération, et cohésion d'équipes font partis du panel d'outils utilisées par nos managers afin de repousser toujours plus loin la puissance et la performance de notre force de vente.   
+                        <p>
+                            Animer : Challenges, cadeaux, rémunération, et cohésion d'équipes font partis du panel d'outils utilisées par nos managers afin de repousser toujours plus loin la puissance et la performance de notre force de vente.
                         </p>
-
                     </div>
-
                 </div>
-
                 <div class= "Nos-valeurs" id="NosValeurs">
-
                     <div class="Nos-valeurs-paragraphe">
                         <h1 class = "NV-titre">Nos valeurs</h1>
                     </div>
-
                     <div class="Partie-Icons">
-
                         <div class="">
                             <h2>
                                 Écoute
                             </h2>
                             <p>  L'Écoute active de nos clients grands comptes et des prospects permet de répondre au mieux à leurs besoins</p>
                         </div>
-
                         <div class="Icons-paragraphe">
                             <h2>
                                 Satisfaction client
                             </h2>
-                            <p> 
-                               Un client satisfait est un client qui recommande. Il est donc essentiel, de l'accompagner et de le conseiller dans sa démarche d'économie d'énergie.  
+                            <p>
+                            Un client satisfait est un client qui recommande. Il est donc essentiel, de l'accompagner et de le conseiller dans sa démarche d'économie d'énergie.
                             </p>
                         </div>
                         <div class="Icons-paragraphe">
                             <h2>
                                 Esprit d'équipe
                             </h2>
-                            <p> 
+                            <p>
                                 Un client satisfait est un client qui recommande.  Il est donc essentiel, de l'accompagner et de le conseiller dans sa démarche d'économie d'énergie.
                             </p>
                         </div>
-
-
                     </div>
                 </div>
-
                 <div class="Nos-postes" id="NosPostes">
                     <h1 class="NP-titre">Nos postes</h1>
                     <div>
@@ -147,7 +123,6 @@
                         </div>
                     </div>
                 </div>
-
                 <form >
                     <div class="row input-container">
                         <div class="col-xs-12">
@@ -174,44 +149,38 @@
                                 <label>Présentez-vous</label>
                             </div>
                         </div>
-                        
                         <input type="submit" value="Envoyer" class="submit-btn hover" />
                     </div>
                 </form>
-        
-
             <!--Step 3 :script gestion soumission formulaire-->
-
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
             </script>
-    
             <script type="text/javascript">
                 $('form').on('submit', (e)=> {
                     e.preventDefault();
-    
                     const email = $('#email').val().trim();
                     const text = $('#text').val().trim();
                     const NomPrénom = $('#html').val().trim();
                     const numéro = $('#numéro').val().trim();
-    
                     const data = {
                         email,
                         text,
                     };
-    
-                    $.post('/email', data, function() {console.log("Server received our data")} 
+                    $.post('/email', data, function() {console.log("Server received our data")}
                     );
                 });
             </script>
-
-        </main>
-
-                <footer class="footer">
-                    <nav class="footer-items">facebook</nav>
-                    <nav class="footer-items">Insta</nav>
-                    <nav class="footer-items">Twitter</nav>
-                </footer>
+            </main>
+            <div class="site-cache" id="site-cache"></div>
+            
+            <footer class="footer">
+                <nav class="footer-items">facebook</nav>
+                <nav class="footer-items">Insta</nav>
+                <nav class="footer-items">Twitter</nav>
+            </footer>
+        
         </div>
-
-    </body>
+    </div>
+    <script type="text/javascript" src="responsive_menu.js"></script>
+</body>
 </html>

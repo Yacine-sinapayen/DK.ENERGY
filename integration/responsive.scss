@@ -1,7 +1,29 @@
 $menu-width:250px!default;
 $bg: linear-gradient(-45deg, #ffde59, #e7333a);
+@mixin anim {
+    transform : (translateX($menu-width * -1));
+    transition-duration:0.3s;
+} 
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 800px) {
+
+    .site-pusher .site-container{ height: 100%;}
+    .site-container {overflow:hidden; height: 100%;}
+    .site-pusher{
+        height: 100%;
+        transition-duration:(0.3s);
+        transform : (translateX(0px));
+    }
+    .site-content{
+        position: absolute;
+        top: 66px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        padding-top: 0;
+        overflow-y: scroll;
+        background-color: #fff;
+    }
     
     .header__icon {
         position: relative;
@@ -23,13 +45,43 @@ $bg: linear-gradient(-45deg, #ffde59, #e7333a);
     }
 
     .menu{
+        @include anim();
+
         position: absolute;
         left: 0;
-        top: 0;
+        top: 0px;
         bottom: 0;
+        color: white;
         
         background: $bg;
         width: $menu-width;
+
+        display:flex;
+        flex-direction: column;
+
+        
+        a{
+            display: block;
+            height: 60px;
+
+            text-align: center;
+            line-height: 40px;
+
+            border-bottom: 1px solid white;
+        }
     }
 
+    .with--sidebar{
+        .site-pusher { 
+            transform : (translateX($menu-width)); 
+        }
+        .site-cache{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color:rgba(0,0,0,0.6);
+        }
+    }
 }

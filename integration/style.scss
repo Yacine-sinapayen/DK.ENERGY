@@ -7,8 +7,9 @@ html, body {
     display: block;
     background-color: #faf7f7;
     font-family: "Montserrat", sans-serif;
-    max-block-size: max-content;
     height: 100%;
+    margin: 0;
+
   }
   
   .h1 {
@@ -47,7 +48,7 @@ html, body {
       display : inline-block;
       margin-right: 1em;
     }
-    a:hover{color: rgb(230, 112, 17);}
+    // a:hover{color: rgb(230, 112, 17);}
   }
 
   // ------------------------
@@ -342,7 +343,7 @@ html, body {
     }
   }
   
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 800px) {
     .header{
         position: static;
     }}
