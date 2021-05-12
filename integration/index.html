@@ -26,20 +26,20 @@
                     <a class="items"  href="#NotreMétier"> Notre métier</a>
                     <a class="items"  href="#NosValeurs"> Nos valeurs</a>
                     <a class="items" href="#NosPostes"> Nos postes</a>
-                    <a class="items postuler" href = "#forms"> Postuler</a>
+                    <a class="items postuler" href = "#redirection"> Postuler</a>
                 </nav>
             </header>
             <main class="site-content">
                 <div class="Qui-sommes-nous">
                     <div class="Qui-sommes-nous-paragraphe">
-                        <h1 class="QSN-titre">DK.ENERGY au service de vos ambitions</h1>
-                        <p class="QSN-titre">DK.ENERGY est expert de la vente à domicile, de l'animation et la promotion des ventes depuis plus de 10 ans. Nous mettons notre SAVOIR-FAIRE au service de VOS AMBITIONS commerciales. DK.ENERGY vous assure, la PERFORMANCE, la SOUPLESSE, et le CONFORT d'une force de vente externalisée.  </p>
+                        <h1 class="QSN-titre">DK Energy au service de vos ambitions</h1>
+                        <p class="QSN-titre">DK Energy est une société créer il y a environ 1 an qui s'impose dans le domaine de la vente à domicile dans la Nouvelle-Aquitaine et la région Rhône-Alpes. C'est une force de vente supplétive. Dk Energy compte bien s'imposer dans le secteur et developper son activité au niveau national.</p>
                     </div>
                     <div class="Qui-sommes-nous-image">
                         <img class="Qui-sommes-nous-logo" src="./images/Logo/Copie de DK.ENERGY logo (1).png" alt="logo">
                     </div>
                 </div>
-                <div class="Article__notre__métier">
+                <div class="Article-notre-métier">
                     <h1 class="NM-titre">Notre métier : Recruter, Former, Animer</h1>
                     <div class="Notre-métier-image">
                         <img class="Notre-métier-logo" src="./images/Notre métier/poignée-de-main.jpg"
@@ -60,23 +60,57 @@
                         </p>
                     </div>
                 </div>
+                <div class="Nos-postes" id="NosPostes">
+                    <h1 class="NP-titre">Nos postes</h1>
+                    <div>
+                        <div class = "Nos-postes-paragraphe">
+                            <h2> Commercial</h2>
+                            <ul>
+                                <li>Optimiste, perseverent(e), enthousiaste.</li>
+                                <li>Démarche au service de nos clients grands comptes.</li>
+                                <li>Se dépasse et donne son maximum afin de performer.</li>
+                                <li>Promus l'image de marque de notre société.</li>
+                            </ul>
+                            <button onclick="$('html,body').animate({scrollTop: $('#form').offset().top},1000);" type="button" placeholder="" class="button">Postuler</button>
+                        </div>
+                        <div class = "Nos-postes-paragraphe">
+                            <h2 class="h2"> Chef d'équipe </h2>
+                            <ul>
+                                <li>Forme et anime nos équipes commerciales</li>
+                                <li> Garant(e) de l'image de marque de l'entreprise </li>
+                                <li>Manage au plus près des commerciaux.</li>
+                            </ul>
+                            <button onclick="$('html,body').animate({scrollTop: $('#form').offset().top},1000);" type="button" placeholder="" class="button">Postuler</button>
+                        </div>
+                        <div class = "Nos-postes-paragraphe">
+                            <h2 class="h2"> Directeur d'agence </h2>
+                            <ul>
+                                <li>Manage les chefs d'équipes et leur effectifs</li>
+                                <li>Responsable des objectifs de son agence</li>
+                                <li>Forme et anime les équipes et veille à la cohésion d'équipe.</li>
+                            </ul>
+                            
+                            <button onclick="$('html,body').animate({scrollTop: $('#form').offset().top},1000);" type="button" placeholder="" class="button">Postuler</button>
+                        </div>
+                    </div>
+                </div>
                 <div class= "Nos-valeurs" id="NosValeurs">
                     <div class="Nos-valeurs-paragraphe">
                         <h1 class = "NV-titre">Nos valeurs</h1>
                     </div>
                     <div class="Partie-Icons">
-                        <div class="">
+                        <div>
                             <h2>
                                 Écoute
                             </h2>
-                            <p>  L'Écoute active de nos clients grands comptes et des prospects permet de répondre au mieux à leurs besoins</p>
+                            <p>  <span style="font-weight: 700;">L'Écoute</span> active de nos clients grands comptes et des prospects permet de répondre au mieux à leurs besoins</p>
                         </div>
                         <div class="Icons-paragraphe">
                             <h2>
                                 Satisfaction client
                             </h2>
                             <p>
-                            Un client satisfait est un client qui recommande. Il est donc essentiel, de l'accompagner et de le conseiller dans sa démarche d'économie d'énergie.
+                            Un <span style="font-weight: 700;"> un client satisfait</span> est un client qui recommande. Il est donc essentiel, de l'accompagner et de le conseiller dans sa démarche d'économie d'énergie.
                             </p>
                         </div>
                         <div class="Icons-paragraphe">
@@ -89,40 +123,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="Nos-postes" id="NosPostes">
-                    <h1 class="NP-titre">Nos postes</h1>
-                    <div>
-                        <div class = "Nos-postes-paragraphe">
-                            <h2 class="h2"> Commercial</h2>
-                            <ul>
-                                <li>Optimiste, perseverent(e), enthousiaste.</li>
-                                <li>Démarche au service de nos clients grands comptes.</li>
-                                <li>Se dépasse et donne son maximum afin de performer.</li>
-                                <li>Promus l'image de marque de notre société.</li>
-                            </ul>
-                            <a class="postuler-nos-postes" href = "#forms"> Postuler</a>
-                        </div>
-                        <div class = "Nos-postes-paragraphe">
-                            <h2 class="h2"> Chef d'équipe </h2>
-                            <ul>
-                                <li>Forme et anime nos équipes commerciales</li>
-                                <li> Garant(e) de l'image de marque de l'entreprise </li>
-                                <li>Manage au plus près des commerciaux.</li>
-                            </ul>
-                            <a class="postuler-nos-postes" href = "#forms"> Postuler</a>
-                        </div>
-                        <div class = "Nos-postes-paragraphe">
-                            <h2 class="h2"> Directeur d'agence </h2>
-                            <ul>
-                                <li>Manage les chefs d'équipes et leur effectifs</li>
-                                <li>Responsable des objectifs de son agence</li>
-                                <li>Forme et anime les équipes et veille à la cohésion d'équipe.</li>
-                            </ul>
-                            <a class="postuler-nos-postes" href = "#forms"> Postuler</a>
-                        </div>
-                    </div>
-                </div>
-                <form >
+               
+                <form id="form">
+                    <h1>Rejoignez-nous !</h1>
                     <div class="row input-container">
                         <div class="col-xs-12">
                             <div class="styled-input wide">
@@ -148,7 +151,9 @@
                                 <label>Présentez-vous</label>
                             </div>
                         </div>
-                        <input type="submit" value="Envoyer" class="submit-btn hover" />
+                        <div class="inupt_submit">
+                            <input type="submit" value="Envoyer" class="submit-btn submit-btn hover "/>
+                        </div>
                     </div>
                 </form>
             <!--Step 3 :script gestion soumission formulaire-->

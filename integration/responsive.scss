@@ -1,7 +1,9 @@
 $menu-width:250px!default;
-$bg: linear-gradient(-45deg, #ffde59, #e7333a);
-$jaune:#ffde59;
+$bg: #F2F2F2;
+$rouge : #c20000;
+$jaune: #F2E1AC;
 $white: white;
+$black: black;
 
 @mixin anim {
     transform : (translateX($menu-width * -1));
@@ -14,7 +16,7 @@ $white: white;
         display:block;
         text-align: center;
         overflow: hidden;
-        margin: 1em;
+        margin: 0;
     }
 
 
@@ -65,7 +67,7 @@ $white: white;
         left: 0;
         top: 0px;
         bottom: 0;
-        color:black;
+        color:$black;
         
         background: $jaune ;
         width: $menu-width;
