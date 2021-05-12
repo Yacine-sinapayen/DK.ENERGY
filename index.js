@@ -33,10 +33,10 @@ app.post('/email', (req, res) => {
 
 
 
-app.use( express.static(__dirname + '/integration'));
+app.use( express.static(__dirname + 'index.html'));
 //Render home page
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname + "integration"));
+    res.sendFile(path.join(__dirname + "index.html"));
 });
 
 

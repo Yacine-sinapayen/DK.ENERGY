@@ -175,7 +175,7 @@ img {
   }
 }
 html, body {
-  font-family: "Montserrat", sans-serif;
+  font-family: Poppins, arial;
   color: 229, 229, 229;
   font-size: 16px;
   line-height: 1.4;
@@ -184,6 +184,10 @@ html, body {
   padding: 0;
   display: block;
   text-align: center;
+}
+
+span {
+  text-transform: uppercase;
 }
 
 a {
@@ -211,13 +215,28 @@ h2 {
   border-radius: 60px;
   display: inline-block;
   text-align: center;
-  color: white;
-  font-size: 1em;
+  font-size: 0.7em;
   cursor: pointer;
+  border-style: none;
+  background: #FAFAFA;
+  border: 2px solid #c20000;
+  color: #c20000;
+  font-weight: 700;
+}
+.button:hover {
+  color: white;
   background: #c20000;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  font-weight: 600;
+}
+
+.dd {
+  background: #F2E1AC;
+  font-size: 0.8em;
+}
+
+.footer_para {
+  background: #FAFAFA;
+  margin-top: 0;
+  padding: 1em;
 }
 
 /* HEADER */
@@ -247,10 +266,10 @@ a {
 }
 
 .Qui-sommes-nous, .Article-notre-métier, .Nos-valeurs, .Nos-postes {
-  padding: 5px 1em 1em 2em;
+  padding: 5px 2em 1em 2em;
 }
 
-.Qui-sommes-nous, .Nos-postes {
+.Qui-sommes-nous, .Nos-postes, .footer {
   background: #FAFAFA;
 }
 
@@ -335,22 +354,6 @@ textarea {
   width: 5px;
   text-align: center;
   display: contents;
-}
-
-.submit-btn {
-  padding: 14px 25px 12px;
-  width: 11em;
-  border-radius: 60px;
-  display: inline-block;
-  text-align: center;
-  color: white;
-  font-size: 1em;
-  cursor: pointer;
-  background: #c20000;
-  -webkit-transition: all 300ms ease;
-  transition: all 300ms ease;
-  font-weight: 600;
-  text-transform: uppercase;
 }
 
 .submit-btn:hover {
