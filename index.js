@@ -33,7 +33,7 @@ app.post('/email', (req, res) => {
 
 
 
-app.use( express.static(__dirname + '/srci/style.css'));
+app.use( express.static(__dirname + '/'));
 //Render home page
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname + "/index.html"));
