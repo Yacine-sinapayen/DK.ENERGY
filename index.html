@@ -19,10 +19,11 @@
             <header class="header">
                 <a href="#" class="header__icon" id="header__icon"></a>                
                 <nav class="menu">
-                    <a class="items"  href="#NotreMétier"> Notre métier</a>
+                    <a class="items" href="#notre-métier"> Notre métier</a>
+                    <!-- onclick="$('html,body').animate({scrollTop: $('#NotreMétier').offset().top},1000);" -->
                     <a class="items"  href="#NosValeurs"> Nos valeurs</a>
                     <a class="items" href="#NosPostes"> Nos postes</a>
-                    <a class="items postuler" href = "#redirection"> Postuler</a>
+                    <a class="items postuler" href = "#form"> Postuler</a>
                 </nav>
             </header>
             <main class="site-content">
@@ -35,8 +36,9 @@
                         <img class="Qui-sommes-nous-logo" src="./images/Logo/Copie de DK.ENERGY logo (1).png" alt="logo">
                     </div>
                 </div>
-                <div class="Article-notre-métier">
-                    <h1 class="NM-titre">Notre métier : Recruter, Former, Animer</h1>
+                
+                <div  class="Article-notre-métier">
+                    <h1 id="notre-métier" class="NM-titre">Notre métier : Recruter, Former, Animer</h1>
                     <div class="Notre-métier-paragraphe">
                         <p class="NM-titre">
                            Vous êtes la principale force de ventes de DK Energy, vous avez un objectif défini et vous vous donnez les moyens de l'atteindre. DK Energy est spécialiste de la force de vente externalisé, avec pour cible les clients particuliers.
