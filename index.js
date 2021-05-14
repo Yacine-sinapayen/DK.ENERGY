@@ -33,10 +33,10 @@ app.post('/email', (req, res) => {
 
 
 
-app.use( express.static(__dirname + '/src'));
+app.use( express.static(__dirname + '/srci'));
 //Render home page
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname + "index.html"));
+    res.sendFile(path.join(__dirname + "/index.html"));
 });
 
 
