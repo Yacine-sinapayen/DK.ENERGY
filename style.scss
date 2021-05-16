@@ -1,18 +1,18 @@
 @use"reset.scss";
-@use "responsive";
 
 
-$bg: #FAFAFA;
+$bg:linear-gradient(-45deg, #ffde59, #e7333a); 
 $rouge : #c20000;
 $jaune: #F2E1AC;
 $white: white;
+$black:black;
 $padding-articles: padding(1em);
 
 
 // Généric
 html, body {
     font-family: Poppins,arial;
-    color: 229, 229, 229;
+    color: white;
     
     font-size: 16px;
     line-height: 1.4;
@@ -29,20 +29,18 @@ html, body {
     text-transform: uppercase;
   }
   
-
   a{text-decoration: none; color:inherit;}
   
   h1 {
-    padding : 0.5em;
-    color: #262626;
+    padding-top : 1em;
     font-size: 1.5em;
     text-align: center;
-    font-weight: 700;
+    font-weight: 900;
+    margin-top: 0;
   }
   h2{
     font-size: 1.2em;
-    color: #ff7073;
-    font-weight: 500;
+    font-weight: 800;
   }
 
   .button{
@@ -57,33 +55,21 @@ html, body {
     cursor: pointer;
   
     border-style: none;
-    background:$bg;
-    border: 2px solid $rouge;
-    color: $rouge;
     font-weight: 700;
-    &:hover {
-      color: white;
-      background: $rouge;
-    }
-  }
-  .dd{
-    background: $jaune;
-    font-size: 0.8em;
   }
 
-  
-  .footer_para{
-    background:$bg;
-    margin-top: 0;
-    padding: 1em;
-  }
-  /* HEADER */
-  a {
+   /* HEADER */
+   a {
     text-decoration: none;
     color: inherit;
   }
+  p{
+    padding-left:1em;
+    padding-right:1em;
+  }
   
   .header {
+    color:$black;
     position: fixed;
     left: 0;
     right: 0;
@@ -91,9 +77,13 @@ html, body {
     height: 66px;
 
     line-height: 66px;
-    color:$white;
-    background-color:$rouge;
+    background :$white;
     box-shadow: 0 4px 2px -2px gray;
+
+    .header__img{
+      float: right;
+      max-width: 60px;
+    }
   }
   
   /* MENU */ 
@@ -104,26 +94,53 @@ html, body {
       display : inline-block;
       margin-right: 1em;
     }
+  }
 
+  //FOOTER
+  .footer_para{
+    margin-top: 0;
+    padding: 1em;
   }
 
   // Articles 
+.Qui-sommes-nous, .Nos-valeurs{
+  background: $bg;
 
-  .Qui-sommes-nous, .Article-notre-métier, .Nos-valeurs, .Nos-postes{
-    padding: 5px 2em 1em 2em; 
-  }
+}
 
-  .Qui-sommes-nous, .Nos-postes, .footer {
-    background:$bg;
-  }
+.Qui-sommes-nous, .Notre-métier {
+    display: flex;
+    align-items: center;
+}
 
+.Nos-valeurs, .Nos-postes{
+  padding-bottom: 20px;
+}
+
+.Qui-sommes-nous-paragraphe, .Notre-métier-paragraphe{
+  width: 50%;
+}
+
+.Qui-sommes-nous-image, .Notre-métier-image{
+  width: 50%;
+}
+
+.Notre-métier{
+  flex-direction: row-reverse;
+}
+
+.Notre-métier-paragraphe, .Nos-postes, .footer {
+  color:$black;
+}
+
+  //FORM
   form {
     padding: 1rem;
-    color: white;
+    color:white;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background:$jaune ;
+    background: $bg;
   }
   
   input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
@@ -225,10 +242,12 @@ html, body {
   }
   
   
-
   //Responsive
   
-  @media only screen and (max-width: 800px) {
-    .header{
-        position: static;
-    }}
+  // @media only screen and (max-width: 800px) {
+    //   .header{
+      //       position: static;
+      //   }}
+      
+  @import "./responsive.scss";
+

@@ -9,9 +9,3 @@
     })
 })(jQuery);
 
-const redirection ={
-    redirection : function() {
-      var buttonElem = document.createElement('boutton');
-      console.log(buttonElem);
-    }
-};

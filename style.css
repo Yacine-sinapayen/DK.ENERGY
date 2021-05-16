@@ -83,100 +83,9 @@ img {
   max-width: 100%;
 }
 
-@media only screen and (max-width: 800px) {
-  .body {
-    display: block;
-    text-align: center;
-    overflow: hidden;
-    margin: 0;
-  }
-
-  .site-pusher .site-container {
-    height: 100%;
-  }
-
-  .site-container {
-    overflow: hidden;
-    height: 100%;
-  }
-
-  .site-pusher {
-    height: 100%;
-    transition-duration: 0.3s;
-    transform: translateX(0px);
-  }
-
-  .site-content {
-    position: absolute;
-    top: 66px;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    padding-top: 0;
-    overflow-y: scroll;
-    background-color: #fff;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .header__icon {
-    position: relative;
-    display: block;
-    float: left;
-    width: 35px;
-    height: 35px;
-    padding: 1em;
-    cursor: pointer;
-  }
-  .header__icon:after {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 1rem;
-    height: 0;
-    box-shadow: 0 10px 0 1px white, 0 16px 0 1px white, 0 22px 0 1px white;
-  }
-
-  .menu {
-    transform: translateX(-250px);
-    transition-duration: 0.3s;
-    position: absolute;
-    left: 0;
-    top: 0px;
-    bottom: 0;
-    color: black;
-    background: #F2E1AC;
-    width: 250px;
-    display: flex;
-    flex-direction: column;
-  }
-  .menu a {
-    display: block;
-    height: 60px;
-    text-align: center;
-    line-height: 40px;
-    border-bottom: 1px solid black;
-  }
-
-  .with--sidebar .site-pusher {
-    transform: translateX(250px);
-  }
-  .with--sidebar .site-cache {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-  }
-}
-@media only screen and (min-width: 800px) {
-  .site-content {
-    padding-top: 58px;
-  }
-}
 html, body {
   font-family: Poppins, arial;
-  color: 229, 229, 229;
+  color: white;
   font-size: 16px;
   line-height: 1.4;
   height: 100%;
@@ -196,17 +105,16 @@ a {
 }
 
 h1 {
-  padding: 0.5em;
-  color: #262626;
+  padding-top: 1em;
   font-size: 1.5em;
   text-align: center;
-  font-weight: 700;
+  font-weight: 900;
+  margin-top: 0;
 }
 
 h2 {
   font-size: 1.2em;
-  color: #ff7073;
-  font-weight: 500;
+  font-weight: 800;
 }
 
 .button {
@@ -218,25 +126,7 @@ h2 {
   font-size: 0.7em;
   cursor: pointer;
   border-style: none;
-  background: #FAFAFA;
-  border: 2px solid #c20000;
-  color: #c20000;
   font-weight: 700;
-}
-.button:hover {
-  color: white;
-  background: #c20000;
-}
-
-.dd {
-  background: #F2E1AC;
-  font-size: 0.8em;
-}
-
-.footer_para {
-  background: #FAFAFA;
-  margin-top: 0;
-  padding: 1em;
 }
 
 /* HEADER */
@@ -245,16 +135,25 @@ a {
   color: inherit;
 }
 
+p {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
 .header {
+  color: black;
   position: fixed;
   left: 0;
   right: 0;
   top: 0;
   height: 66px;
   line-height: 66px;
-  color: white;
-  background-color: #c20000;
+  background: white;
   box-shadow: 0 4px 2px -2px gray;
+}
+.header .header__img {
+  float: right;
+  max-width: 60px;
 }
 
 /* MENU */
@@ -265,12 +164,38 @@ a {
   margin-right: 1em;
 }
 
-.Qui-sommes-nous, .Article-notre-métier, .Nos-valeurs, .Nos-postes {
-  padding: 5px 2em 1em 2em;
+.footer_para {
+  margin-top: 0;
+  padding: 1em;
 }
 
-.Qui-sommes-nous, .Nos-postes, .footer {
-  background: #FAFAFA;
+.Qui-sommes-nous, .Nos-valeurs {
+  background: linear-gradient(-45deg, #ffde59, #e7333a);
+}
+
+.Qui-sommes-nous, .Notre-métier {
+  display: flex;
+  align-items: center;
+}
+
+.Nos-valeurs, .Nos-postes {
+  padding-bottom: 20px;
+}
+
+.Qui-sommes-nous-paragraphe, .Notre-métier-paragraphe {
+  width: 50%;
+}
+
+.Qui-sommes-nous-image, .Notre-métier-image {
+  width: 50%;
+}
+
+.Notre-métier {
+  flex-direction: row-reverse;
+}
+
+.Notre-métier-paragraphe, .Nos-postes, .footer {
+  color: black;
 }
 
 form {
@@ -279,7 +204,7 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #F2E1AC;
+  background: linear-gradient(-45deg, #ffde59, #e7333a);
 }
 
 input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
@@ -379,8 +304,118 @@ input[type=checkbox]:checked + label {
 }
 
 @media only screen and (max-width: 800px) {
-  .header {
+  .header .header__img {
+    float: inherit;
+  }
+
+  .body {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  .Qui-sommes-nous-paragraphe {
+    padding: 1em;
+  }
+
+  .Qui-sommes-nous-image {
     position: static;
+  }
+
+  .site-pusher .site-container {
+    height: 100%;
+  }
+
+  .site-container {
+    overflow: hidden;
+    height: 100%;
+  }
+
+  .site-pusher {
+    height: 100%;
+    transition-duration: 0.3s;
+    transform: translateX(0px);
+  }
+
+  .site-content {
+    position: absolute;
+    top: 66px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding-top: 0;
+    overflow-y: scroll;
+    background-color: #fff;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .header__icon {
+    position: relative;
+    display: block;
+    float: left;
+    width: 35px;
+    height: 35px;
+    padding: 1em;
+    cursor: pointer;
+  }
+  .header__icon:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 1rem;
+    height: 0;
+    box-shadow: 0 10px 0 1px black, 0 16px 0 1px black, 0 22px 0 1px black;
+  }
+
+  .menu {
+    transform: translateX(-250px);
+    transition-duration: 0.3s;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    bottom: 0;
+    color: black;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+  }
+  .menu a {
+    display: block;
+    height: 60px;
+    text-align: center;
+    line-height: 40px;
+    border-bottom: 1px solid black;
+  }
+
+  .with--sidebar .site-pusher {
+    transform: translateX(250px);
+  }
+  .with--sidebar .site-cache {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+@media only screen and (max-width: 760px) {
+  .Qui-sommes-nous, .Notre-métier {
+    flex-direction: column;
+  }
+
+  .Qui-sommes-nous, .Notre-métier, .Nos-valeurs, .Nos-postes {
+    padding-bottom: 20px;
+  }
+
+  .Qui-sommes-nous-paragraphe, .Notre-métier-paragraphe {
+    width: 70%;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .site-content {
+    padding-top: 58px;
   }
 }
 
