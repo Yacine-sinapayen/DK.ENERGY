@@ -38,16 +38,39 @@ html, body {
     font-weight: 900;
     margin-top: 0;
   }
+
+  .div-np-titre{
+    text-align: center;
+  }
+  .NP-titre{
+    border: 3px solid $black;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+    width: 300px;
+    height: 70px;
+    margin-top: 1em;
+    padding-bottom: 15px;
+    display: inline-flex;
+  }
+  
+
   h2{
     font-size: 1.2em;
     font-weight: 800;
   }
 
   .button{
+
+    background: linear-gradient(-45deg, #ffde59, #e7333a);
+    color:$white;
     padding: 0.5em;
     width: 8.5em;
    
-    border-radius: 60px;
+    border-radius: 50px;
     display: inline-block;
 
     text-align: center;
@@ -57,6 +80,9 @@ html, body {
     border-style: none;
     font-weight: 700;
   }
+
+  
+  
 
    /* HEADER */
    a {
@@ -74,15 +100,15 @@ html, body {
     left: 0;
     right: 0;
     top: 0;
-    height: 66px;
+    height: 80px;
 
     line-height: 66px;
     background :$white;
     box-shadow: 0 4px 2px -2px gray;
 
     .header__img{
-      float: right;
-      max-width: 60px;
+      float: left;
+      max-height: 90px;
     }
   }
   
@@ -93,8 +119,32 @@ html, body {
       padding: 0 10px; 
       display : inline-block;
       margin-right: 1em;
+      margin-top: 10px;
     }
   }
+  .a-postuler{
+    display: flex;
+    align-items: center;
+
+    width: 140px;
+    height: 40px;
+
+    margin: 0;
+    font-weight: 700;
+    cursor: pointer;
+
+    border-radius: 50px;
+    box-shadow: 12px 12px 16px 0 rgb(0 0 0 / 25%), -8px -8px 12px 0 rgb(255 255 255 / 30%);
+
+    background: linear-gradient(-45deg, #ffde59, #e7333a);
+    color:white;  
+    p{
+      padding: 0;
+      margin:0;
+      line-height: 37px;
+    }
+  }
+
 
   //FOOTER
   .footer_para{
@@ -105,13 +155,36 @@ html, body {
   // Articles 
 .Qui-sommes-nous, .Nos-valeurs{
   background: $bg;
+}
 
+.Qui-sommes-nous {
+  height: 90vh;
 }
 
 .Qui-sommes-nous, .Notre-métier {
     display: flex;
     align-items: center;
+
+    .Qui-sommes-nous-image-size{
+      width: 400px;
+      box-shadow: -8px -8px 12px 0 rgba(0, 0, 0, 0.3),12px 12px 16px rgba(255, 255, 255, 0.25);
+    }
+  }
+.Nos-valeurs{
+  height: 40vh;
+  padding-top: 30px;
 }
+  .Nos-valeurs-paragraphe{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 6px;
+    padding-left: 6px;
+    div{
+      width: 34%;
+      border-left: 1px solid $white;
+      border-right: 1px solid $white;
+    }
+  }
 
 .Nos-valeurs, .Nos-postes{
   padding-bottom: 20px;
@@ -124,6 +197,8 @@ html, body {
 .Qui-sommes-nous-image, .Notre-métier-image{
   width: 50%;
 }
+
+
 
 .Notre-métier{
   flex-direction: row-reverse;
