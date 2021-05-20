@@ -227,6 +227,7 @@ html, body {
     align-items: center;
     background: $bg;
   }
+
   
   input:focus ~ label, textarea:focus ~ label, input:valid ~ label, textarea:valid ~ label {
     font-size: 0.75em;
@@ -243,6 +244,13 @@ html, body {
     position: relative;
     border-radius: 4px;
   }
+
+// input::-webkit-input-placeholder{
+//     font-family: Poppins,arial;
+//     color: red;
+//     font-size: 0.75em;
+//   }
+
   
   @media only screen and (max-width: 800px) {
     .styled-input {
@@ -264,6 +272,7 @@ html, body {
     width: 650px;
     max-width: 100%;
   }
+ 
   
   input,
   textarea {
