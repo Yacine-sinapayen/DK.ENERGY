@@ -93,6 +93,7 @@ html, body {
   padding: 0;
   display: block;
   text-align: center;
+  height: 100%;
 }
 
 span {
@@ -118,7 +119,6 @@ h1 {
 
 .NP-titre {
   border: 3px solid black;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -165,8 +165,8 @@ p {
   left: 0;
   right: 0;
   top: 0;
-  height: 80px;
-  line-height: 66px;
+  height: 90px;
+  line-height: 70px;
   background: white;
   box-shadow: 0 4px 2px -2px gray;
 }
@@ -177,18 +177,20 @@ p {
 
 /* MENU */
 .menu a {
-  font-weight: bold;
   padding: 0 10px;
   display: inline-block;
   margin-right: 1em;
   margin-top: 10px;
 }
+.menu a:hover {
+  transform: scale(1.2);
+}
 
 .a-postuler {
   display: flex;
   align-items: center;
-  width: 140px;
-  height: 40px;
+  width: 130px;
+  height: 30px;
   margin: 0;
   font-weight: 700;
   cursor: pointer;
@@ -200,7 +202,7 @@ p {
 .a-postuler p {
   padding: 0;
   margin: 0;
-  line-height: 37px;
+  line-height: 34px;
 }
 
 .footer_para {
@@ -208,12 +210,13 @@ p {
   padding: 1em;
 }
 
-.Qui-sommes-nous, .Nos-valeurs {
-  background: linear-gradient(-45deg, #ffde59, #e7333a);
+.Notre-métier-paragraphe, .Nos-valeurs, .Nos-postes {
+  padding-top: 66px;
+  padding-bottom: 66px;
 }
 
-.Qui-sommes-nous {
-  height: 90vh;
+.Qui-sommes-nous, .Nos-valeurs {
+  background: linear-gradient(-45deg, #ffde59, #e7333a);
 }
 
 .Qui-sommes-nous, .Notre-métier {
@@ -223,11 +226,6 @@ p {
 .Qui-sommes-nous .Qui-sommes-nous-image-size, .Notre-métier .Qui-sommes-nous-image-size {
   width: 400px;
   box-shadow: -8px -8px 12px 0 rgba(0, 0, 0, 0.3), 12px 12px 16px rgba(255, 255, 255, 0.25);
-}
-
-.Nos-valeurs {
-  height: 40vh;
-  padding-top: 30px;
 }
 
 .Nos-valeurs-paragraphe {
@@ -242,16 +240,16 @@ p {
   border-right: 1px solid white;
 }
 
-.Nos-valeurs, .Nos-postes {
-  padding-bottom: 20px;
-}
-
 .Qui-sommes-nous-paragraphe, .Notre-métier-paragraphe {
   width: 50%;
 }
 
 .Qui-sommes-nous-image, .Notre-métier-image {
   width: 50%;
+}
+
+.Notre-métier-image {
+  height: 520px;
 }
 
 .Notre-métier {
@@ -263,7 +261,7 @@ p {
 }
 
 form {
-  padding: 1rem;
+  padding: 66px 1em 1em 1em;
   color: white;
   display: flex;
   flex-direction: column;
@@ -315,6 +313,7 @@ textarea {
   width: 100%;
   font-size: 1rem;
   border-radius: 4px;
+  resize: vertical;
 }
 
 input:focus,
@@ -332,6 +331,7 @@ textarea:focus ~ span {
 textarea {
   width: 100%;
   min-height: 15em;
+  resize: vertical;
 }
 
 .input-container {
@@ -367,6 +367,19 @@ input[type=checkbox]:checked + label {
   font-style: normal;
 }
 
+@media only screen and (max-width: 1200px) {
+  .Notre-métier {
+    flex-direction: column;
+  }
+
+  .Notre-métier-paragraphe {
+    width: 90%;
+  }
+
+  .Notre-métier-image {
+    height: fit-content;
+  }
+}
 @media only screen and (max-width: 800px) {
   .header .header__img {
     float: inherit;
@@ -463,18 +476,36 @@ input[type=checkbox]:checked + label {
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.6);
   }
-}
-@media only screen and (max-width: 760px) {
-  .Qui-sommes-nous, .Notre-métier {
+
+  .Qui-sommes-nous {
     flex-direction: column;
+  }
+
+  .Qui-sommes-nous-paragraphe {
+    width: 90%;
   }
 
   .Qui-sommes-nous, .Notre-métier, .Nos-valeurs, .Nos-postes {
     padding-bottom: 20px;
   }
 
-  .Qui-sommes-nous-paragraphe, .Notre-métier-paragraphe {
-    width: 70%;
+  form, .Nos-valeurs, .Nos-postes, .Notre-métier {
+    padding: 1em;
+  }
+}
+@media only screen and (max-width: 770px) {
+  .Nos-valeurs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Nos-valeurs-paragraphe {
+    flex-direction: column;
+    align-items: center;
+  }
+  .Nos-valeurs-paragraphe div {
+    width: 90%;
   }
 }
 @media only screen and (min-width: 800px) {

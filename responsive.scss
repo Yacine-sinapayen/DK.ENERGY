@@ -5,17 +5,32 @@ $jaune: #F2E1AC;
 $white: white;
 $black: black;
 $breakpoint-tablet:800px;
-$breakpoint-iphone:760px;
+$breakpoint-iphone:770px;
+$breakpoint-notre-métier:1200px;
+
 
 @mixin anim {
     transform : (translateX($menu-width * -1));
     transition-duration:0.3s;
 } 
-
+//1200px
+@media only screen and (max-width: 1200px) {
+    .Notre-métier{
+        flex-direction: column;
+    }
+    .Notre-métier-paragraphe{
+        width: 90%;
+      }
+    .Notre-métier-image{
+        height: fit-content;
+    }
+}
+//800
 @media only screen and (max-width: $breakpoint-tablet) {
     .header .header__img{
-        float:inherit;
+        float:inherit;   
     }
+   
     .body{
         display:block;
         text-align: center;
@@ -109,19 +124,34 @@ $breakpoint-iphone:760px;
             background-color:rgba(0,0,0,0.6);
         }
     }
-}
-
-@media only screen and (max-width: $breakpoint-iphone){
-    .Qui-sommes-nous, .Notre-métier{
+    .Qui-sommes-nous {
         flex-direction: column;
     }
+    .Qui-sommes-nous-paragraphe{
+        width: 90%;
+      }
     .Qui-sommes-nous, .Notre-métier, .Nos-valeurs, .Nos-postes{
         padding-bottom: 20px;
     }
-    .Qui-sommes-nous-paragraphe, .Notre-métier-paragraphe{
-        width: 70%;
-      }
+    form, .Nos-valeurs, .Nos-postes, .Notre-métier {
+        padding:1em;
+    }
 
+}
+
+@media only screen and (max-width: $breakpoint-iphone){
+    .Nos-valeurs{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .Nos-valeurs-paragraphe {
+        flex-direction: column;
+        align-items: center;
+        div{
+            width: 90%;
+        }
+    }
 }
 
 @media only screen and (min-width: 800px) {
