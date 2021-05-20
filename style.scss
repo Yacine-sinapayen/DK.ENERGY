@@ -87,9 +87,6 @@ html, body {
     overflow-y: scroll;
   }
 
-  
-  
-
    /* HEADER */
    a {
     text-decoration: none;
@@ -133,12 +130,14 @@ html, body {
   .a-postuler{
     display: flex;
     align-items: center;
-
+    display:inline-flex;
+    
     width: 130px;
     height: 30px;
     
-
+    
     margin: 0;
+    justify-content: center;
     font-weight: 700;
     cursor: pointer;
 
@@ -147,6 +146,7 @@ html, body {
 
     background: linear-gradient(-45deg, #ffde59, #e7333a);
     color:white;  
+
     p{
       padding: 0;
       margin:0;
@@ -244,12 +244,6 @@ html, body {
     position: relative;
     border-radius: 4px;
   }
-
-// input::-webkit-input-placeholder{
-//     font-family: Poppins,arial;
-//     color: red;
-//     font-size: 0.75em;
-//   }
 
   
   @media only screen and (max-width: 800px) {
