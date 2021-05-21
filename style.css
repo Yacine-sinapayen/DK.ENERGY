@@ -107,7 +107,7 @@ a {
 
 h1 {
   padding-top: 1em;
-  font-size: 1.5em;
+  font-size: 1.9em;
   text-align: center;
   margin-top: 0;
 }
@@ -131,6 +131,10 @@ h1 {
 h2 {
   font-size: 1.2em;
   font-weight: 800;
+}
+
+.Nm-titre-h1 {
+  margin-bottom: -0.5em;
 }
 
 .button {
@@ -385,6 +389,10 @@ input[type=checkbox]:checked + label {
 @media only screen and (max-width: 800px) {
   .header .header__img {
     float: inherit;
+  }
+
+  .header__img {
+    margin-right: 41px;
   }
 
   .body {
