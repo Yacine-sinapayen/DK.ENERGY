@@ -109,7 +109,6 @@ h1 {
   padding-top: 1em;
   font-size: 1.5em;
   text-align: center;
-  font-weight: 900;
   margin-top: 0;
 }
 
@@ -147,7 +146,6 @@ h2 {
   border-style: none;
   font-weight: 700;
   -webkit-overflow-scrolling: touch;
-  overflow-y: scroll;
 }
 
 /* HEADER */
